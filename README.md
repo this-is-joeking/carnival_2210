@@ -1,6 +1,6 @@
 # Carnival
 
-# Instructions
+## Instructions
 * Fork this Repository
 * Clone your forked repo
 * Complete the activity Below
