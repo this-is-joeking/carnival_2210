@@ -172,5 +172,5 @@ Use TDD to create a `Carnival` class that adds the following functionality:
    * List of rides and who rode each ride and the ride's total revenue
 
 ## Iteration 4
-* A carnival has a start date that is returned in the format of mm-dd-yyyy and can calculate its end date
-* The Carnival class can return a collection of all instances of itself and total revenue of all carnivals.
+1. A carnival has a start date that is returned in the format of mm-dd-yyyy and can calculate its end date
+2. The Carnival class can return a collection of all instances of itself and total revenue of all carnivals.
