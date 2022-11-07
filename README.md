@@ -14,7 +14,7 @@
 
 Graded Items:
 
-1. Create a Visitor with attributes: `Visitor.new` and a way to read that data
+1. Create a Visitor with attributes and a way to read that data
 2. Visitors have `preferences` and can list those preferences
 3. Visitors can check if they are tall enough for rides based on a given height threshold
 
