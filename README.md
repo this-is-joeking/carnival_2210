@@ -166,10 +166,10 @@ Use TDD to create a `Carnival` class that adds the following functionality:
 4. A carnival can tell us its most profitable ride
 5. A carnival can calculate the total revenue earned from all its rides.
 6. A carnival can provide a summary hash that includes:
-  * Visitor count
-  * Revenue earned
-  * List of visitors and each visitor's favorite ride and how much total money a visitor spent
-  * List of rides and who rode each ride and the ride's total revenue
+   * Visitor count
+   * Revenue earned
+   * List of visitors and each visitor's favorite ride and how much total money a visitor spent
+   * List of rides and who rode each ride and the ride's total revenue
 
 ## Iteration 4
 * A carnival has a start date that is returned in the format of mm-dd-yyyy and can calculate its end date
