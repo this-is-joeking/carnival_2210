@@ -22,7 +22,7 @@ Graded Items:
 Use TDD to create a `Visitor` class that responds to the following interaction pattern:
 
 
-```bash
+```shell
 pry(main)> require './lib/visitor'
 #=> true
 
@@ -63,6 +63,9 @@ pry(main)> visitor2.tall_enough?(54)
 pry(main)> visitor3.tall_enough?(54)
 #=> true
 
+pry(main)> visitor1.tall_enough?(64)
+#=> false
+
 ```
 
 ## Iteration 2 - Rides
@@ -77,7 +80,7 @@ Graded Items:
 
 Use TDD to create a `Ride` class that responds to the following interaction pattern:
 
-```bash
+```shell
 pry(main)> require './lib/visitor'
 #=> true
 
@@ -172,5 +175,6 @@ Use TDD to create a `Carnival` class that adds the following functionality:
    * List of rides and who rode each ride and the ride's total revenue
 
 ## Iteration 4
-1. A carnival has a start date that is returned in the format of mm-dd-yyyy and can calculate its end date
-2. The Carnival class can return a collection of all instances of itself and total revenue of all carnivals.
+1. A carnival has a start date that is returned in the format of mm-dd-yyyy. It also has a method to calculate its end date returned in the same format.
+2. The Carnival class can return a collection of all instances of itself.
+3. The Carnival class can calculate the total revenue of all carnivals.
