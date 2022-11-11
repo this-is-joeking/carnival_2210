@@ -137,8 +137,8 @@ pry(main)> ride1.total_revenue
 pry(main)> visitor3 = Visitor.new('Penny', 64, '$15')
 #=> #<Visitor:0x0000000159a852a0 @height=64, @name="Penny", @preferences=[], @spending_money=15>
 
-pry(main)> ride2 = Ride.new({ name: 'Ferris Wheel', min_height: 36, admission_fee: 1.5, excitement: :gentle })
-#=> #<Ride:0x0000000159a0cd00 @admission_fee=1.5, @excitement=:gentle, @min_height=36, @name="Ferris Wheel", @rider_log={}>
+pry(main)> ride2 = Ride.new({ name: 'Ferris Wheel', min_height: 36, admission_fee: 5, excitement: :gentle })
+#=> #<Ride:0x0000000159a0cd00 @admission_fee=5, @excitement=:gentle, @min_height=36, @name="Ferris Wheel", @rider_log={}>
 
 pry(main)> ride3 = Ride.new({ name: 'Roller Coaster', min_height: 54, admission_fee: 2, excitement: :thrilling })
 #=> #<Ride:0x0000000159ae7a68 @admission_fee=2, @excitement=:thrilling, @min_height=54, @name="Roller Coaster", @rider_log={}>
