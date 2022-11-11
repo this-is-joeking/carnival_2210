@@ -165,16 +165,17 @@ Use TDD to create a `Carnival` class that adds the following functionality:
 
 1. Each carnival has a duration, as well as a way to read that data
 2. Each carnival has rides and can list those rides.
-3. A carnival can tell us its most popular ride.
-4. A carnival can tell us its most profitable ride
-5. A carnival can calculate the total revenue earned from all its rides.
-6. A carnival can provide a summary hash that includes:
+
+Additionally, use TDD to add the following functionality to the `Carnival` class. A passing challenge will complete *at least* one of the following. We recommend completing more than one if you have time.
+
+1. A carnival can tell us its most popular ride.
+1. A carnival can tell us its most profitable ride
+1. A carnival can calculate the total revenue earned from all its rides.
+
+## Iteration 4
+1. A carnival can provide a summary hash that includes:
    * Visitor count
    * Revenue earned
    * List of visitors and each visitor's favorite ride and how much total money a visitor spent
    * List of rides and who rode each ride and the ride's total revenue
-
-## Iteration 4
-1. A carnival has a start date that is returned in the format of mm-dd-yyyy. It also has a method to calculate its end date returned in the same format.
-2. The Carnival class can return a collection of all instances of itself.
 3. The Carnival class can calculate the total revenue of all carnivals.
