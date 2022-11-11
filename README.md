@@ -22,7 +22,7 @@ Graded Items:
 Use TDD to create a `Visitor` class that responds to the following interaction pattern:
 
 
-```shell
+```ruby
 pry(main)> require './lib/visitor'
 #=> true
 
@@ -80,7 +80,7 @@ Graded Items:
 
 Use TDD to create a `Ride` class that responds to the following interaction pattern:
 
-```shell
+```ruby
 pry(main)> require './lib/visitor'
 #=> true
 
