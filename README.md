@@ -99,6 +99,12 @@ pry(main)> ride1.min_height
 pry(main)> ride1.admission_fee
 #=> 1
 
+pry(main)> ride1.excitement
+#=> :gentle
+
+pry(main)> ride1.total_revenue
+#=> 0
+
 pry(main)> visitor1 = Visitor.new('Bruce', 54, '$10')
 #=> #<Visitor:0x000000015a16e918 @height=54, @name="Bruce", @preferences=[], @spending_money=10>
 
@@ -124,6 +130,9 @@ pry(main)> visitor1.spending_money
 
 pry(main)> visitor2.spending_money
 #=> 4
+
+pry(main)> ride1.total_revenue
+#=> 3
 
 pry(main)> visitor3 = Visitor.new('Penny', 64, '$15')
 #=> #<Visitor:0x0000000159a852a0 @height=64, @name="Penny", @preferences=[], @spending_money=15>
@@ -157,6 +166,9 @@ pry(main)> visitor3.spending_money
 
 pry(main)> ride3.rider_log
 #=> {#<Visitor:0x0000000159a852a0 @height=64, @name="Penny", @preferences=[:thrilling], @spending_money=13>=>1}
+
+pry(main)> ride3.total_revenue
+#=> 2
 ```
 
 ## Iteration 3 - Carnival
