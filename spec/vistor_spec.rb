@@ -38,4 +38,17 @@ RSpec.describe Visitor do
       expect(visitor1.preferences).to eq([:gentle, :water])
     end
   end
+
+  describe '#tall_enough?()' do
+    it 'returns boolean stating if visitor is talling enough for ride per given height' do
+      visitor1 = Visitor.new('John', 54, '$10')
+      visitor2 = Visitor.new('Paul', 36, '$10')
+      visitor3 = Visitor.new('Marie', 64, '$10')
+
+      expect(visitor1.tall_enough?(54)).to be true
+      expect(visitor2.tall_enough?(54)).to be true
+      expect(visitor3.tall_enough?(54)).to be true
+      expect(visitor1.tall_enough?(64)).to be false      
+    end
+  end
 end
