@@ -51,4 +51,28 @@ RSpec.describe Ride do
       expect(ride.rider_log).to eq({ visitor3 => 1 })
     end
   end
+
+  describe '#excited_enough?()' do
+    it 'return boolean confirming if visitor has preference for this ride' do
+      ride = Ride.new({ name: 'Roller Coaster', min_height: 54, admission_fee: 2, excitement: :thrilling })
+      visitor1 = Visitor.new('Bruce', 54, '$10')
+      visitor2 = Visitor.new('Tucker', 36, '$5')
+      visitor1.add_preference(:thrilling)
+      visitor2.add_preference(:gentle)
+
+      expect(ride.excited_enough?(visitor1)).to be true
+      expect(ride.excited_enough?(visitor2)).to be false
+    end
+  end
+
+  describe '#rich_enough?()' do
+    it 'returns a boolean confirming if visitor has enough money for ride' do
+      ride = Ride.new({ name: 'Roller Coaster', min_height: 54, admission_fee: 2, excitement: :thrilling })
+      visitor1 = Visitor.new('Bruce', 54, '$10')
+      visitor2 = Visitor.new('Tucker', 36, '$1')
+
+      expect(ride.rich_enough?(visitor1)).to be true
+      expect(ride.rich_enough?(visitor2)).to be false
+    end
+  end
 end
