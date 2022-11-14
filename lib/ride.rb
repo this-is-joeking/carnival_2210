@@ -3,7 +3,8 @@ class Ride
               :min_height,
               :admission_fee,
               :excitement,
-              :total_revenue
+              :total_revenue,
+              :rider_log
 
   def initialize(ride_data)
     @name = ride_data[:name]
@@ -11,5 +12,6 @@ class Ride
     @admission_fee = ride_data[:admission_fee]
     @excitement = ride_data[:excitement]
     @total_revenue = 0
+    @rider_log = {}
   end
 end
