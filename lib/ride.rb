@@ -33,4 +33,8 @@ class Ride
     visitor.spending_money -= @admission_fee
     @total_revenue += @admission_fee
   end
+
+  def number_of_riders
+    @rider_log.values.sum
+  end
 end
