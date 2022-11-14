@@ -103,12 +103,12 @@ RSpec.describe Ride do
       visitor1.add_preference(:thrilling)
       visitor2.add_preference(:thrilling)
       visitor3.add_preference(:thrilling)
-      
+
       expect(ride.number_of_riders).to eq(0)
 
       3.times { ride.board_rider(visitor1) }
       2.times { ride.board_rider(visitor2) }
-      
+
       expect(ride.number_of_riders).to eq(5)
 
       ride.board_rider(visitor3)

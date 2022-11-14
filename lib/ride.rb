@@ -14,7 +14,7 @@ class Ride
     @total_revenue = 0
     @rider_log = Hash.new(0)
   end
-  
+
   def excited_enough?(visitor)
     visitor.preferences.include?(@excitement)
   end
@@ -29,6 +29,7 @@ class Ride
 
   def board_rider(visitor)
     return nil unless able_to_ride?(visitor)
+    
     @rider_log[visitor] += 1
     visitor.spending_money -= @admission_fee
     @total_revenue += @admission_fee
