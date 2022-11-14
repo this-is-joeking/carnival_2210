@@ -25,4 +25,17 @@ RSpec.describe Visitor do
       expect(visitor1.format_money('123_000')).to eq(123_000)
     end
   end
+
+  describe '#add_preference' do
+    it 'adds preferences to the preferences attribute' do
+      visitor1 = Visitor.new('Bruce', 54, '$10')
+
+      expect(visitor1.preferences).to eq([])
+
+      visitor1.add_preference(:gentle)
+      visitor1.add_preference(:water)
+      
+      expect(visitor1.preferences).to eq([:gentle, :water])
+    end
+  end
 end
