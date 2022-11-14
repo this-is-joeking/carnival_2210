@@ -16,7 +16,9 @@ class Ride
   end
 
   def able_to_ride?(visitor)
-    visitor.excited_enough?(@excitement) && visitor.rich_enough?(@admission_fee) && visitor.tall_enough?(@min_height)
+    visitor.excited_enough?(@excitement) && 
+    visitor.rich_enough?(@admission_fee) && 
+    visitor.tall_enough?(@min_height)
   end
 
   def board_rider(visitor)
