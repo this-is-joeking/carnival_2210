@@ -75,4 +75,22 @@ RSpec.describe Ride do
       expect(ride.rich_enough?(visitor2)).to be false
     end
   end
+
+  describe '#able_to_ride?()' do
+    it 'returns boolean confirming if rider has preference, height, and money needed for ride' do
+      ride = Ride.new({ name: 'Roller Coaster', min_height: 54, admission_fee: 2, excitement: :thrilling })
+      visitor1 = Visitor.new('Bruce', 54, '$10')
+      visitor2 = Visitor.new('Tucker', 36, '$5')
+      visitor3 = Visitor.new('john', 54, '$1')
+      visitor4 = Visitor.new('jack', 64, '$2')
+      visitor1.add_preference(:thrilling)
+      visitor2.add_preference(:thrilling)
+      visitor3.add_preference(:thrilling)
+
+      expect(ride.able_to_ride?(visitor1)).to eq true
+      expect(ride.able_to_ride?(visitor2)).to eq false
+      expect(ride.able_to_ride?(visitor3)).to eq false
+      expect(ride.able_to_ride?(visitor4)).to eq false
+    end
+  end
 end
