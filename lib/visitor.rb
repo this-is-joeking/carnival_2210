@@ -13,6 +13,7 @@ class Visitor
 
   def format_money(string)
     return string[1..].to_i if string.is_a?(String) && string[0] == '$'
+    
     string.to_i
   end
 

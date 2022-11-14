@@ -19,7 +19,7 @@ RSpec.describe Visitor do
   describe '#format_money' do
     it 'takes a dollar value string and turns it to an integer' do
       visitor1 = Visitor.new('Bruce', 54, '$10')
-      
+
       expect(visitor1.format_money('$123_000')).to eq(123_000)
       expect(visitor1.format_money(123_000)).to eq(123_000)
       expect(visitor1.format_money('123_000')).to eq(123_000)
@@ -34,7 +34,7 @@ RSpec.describe Visitor do
 
       visitor1.add_preference(:gentle)
       visitor1.add_preference(:water)
-      
+
       expect(visitor1.preferences).to eq([:gentle, :water])
     end
   end
@@ -48,7 +48,7 @@ RSpec.describe Visitor do
       expect(visitor1.tall_enough?(54)).to be true
       expect(visitor2.tall_enough?(54)).to be false
       expect(visitor3.tall_enough?(54)).to be true
-      expect(visitor1.tall_enough?(64)).to be false      
+      expect(visitor1.tall_enough?(64)).to be false
     end
   end
 end

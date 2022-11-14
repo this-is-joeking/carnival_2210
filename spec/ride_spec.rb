@@ -93,4 +93,27 @@ RSpec.describe Ride do
       expect(ride.able_to_ride?(visitor4)).to eq false
     end
   end
+
+  describe '#number_of_riders' do
+    it 'returns the total number of riders' do
+      ride = Ride.new({ name: 'Roller Coaster', min_height: 54, admission_fee: 2, excitement: :thrilling })
+      visitor1 = Visitor.new('Bruce', 54, '$10')
+      visitor2 = Visitor.new('Tucker', 72, '$5')
+      visitor3 = Visitor.new('john', 60, '$12')
+      visitor1.add_preference(:thrilling)
+      visitor2.add_preference(:thrilling)
+      visitor3.add_preference(:thrilling)
+
+      expect(ride.number_of_riders).to eq(0)
+
+      3.times { ride.board_rider(visitor1) }
+      2.times { ride.board_rider(visitor2) }
+
+      expect(ride.number_of_riders).to eq(5)
+
+      ride.board_rider(visitor3)
+
+      expect(ride.number_of_riders).to eq(6)
+    end
+  end
 end
