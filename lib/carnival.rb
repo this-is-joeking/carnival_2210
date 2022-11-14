@@ -12,4 +12,10 @@ class Carnival
   def add_ride(ride)
     @rides << ride
   end
+
+  def total_revenue
+    @rides.sum do |ride|
+      ride.total_revenue
+    end
+  end
 end
