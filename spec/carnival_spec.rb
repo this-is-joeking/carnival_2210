@@ -31,4 +31,25 @@ RSpec.describe Carnival do
       expect(carnival.rides).to eq([ride1, ride2, ride3])
     end
   end
+
+  describe '#total_revenue' do
+    it 'returns the total revenue of all rides' do
+      carnival = Carnival.new('4 Corners Carnival', '30 days')
+      ride1 = Ride.new({ name: 'Carousel', min_height: 24, admission_fee: 1, excitement: :gentle })
+      ride2 = Ride.new({ name: 'Roller Coaster', min_height: 54, admission_fee: 2, excitement: :thrilling })
+      ride3 = Ride.new({ name: 'Ferris Wheel', min_height: 36, admission_fee: 5, excitement: :gentle })
+      visitor1 = Visitor.new('Bruce', 54, '$10')
+      visitor2 = Visitor.new('Tucker', 36, '$50')
+      visitor1.add_preference(:thrilling)
+      visitor2.add_preference(:gentle)
+      
+      expect(carnival.total_revenue).to eq(0)
+
+      3.times { ride1.board_rider(visitor2) } #3
+      4.times { ride2.board_rider(visitor1) } #8
+      5.times { ride3.board_rider(visitor2) } #25
+
+      expect(carnival.total_revenue).to eq(36)
+    end
+  end
 end
