@@ -65,4 +65,16 @@ RSpec.describe Visitor do
       expect(visitor2.excited_enough?(:gentle)).to be true
     end
   end
+
+  describe '#rich_enough?()' do
+    it 'returns a boolean confirming if visitor has enough money for ride' do
+      visitor1 = Visitor.new('Bruce', 54, '$10')
+      visitor2 = Visitor.new('Clarke', 56, '$10')
+      visitor3 = Visitor.new('Tucker', 36, '$1')
+
+      expect(visitor1.rich_enough?(5)).to be true
+      expect(visitor2.rich_enough?(10)).to be true      
+      expect(visitor3.rich_enough?(5)).to be false
+    end
+  end
 end

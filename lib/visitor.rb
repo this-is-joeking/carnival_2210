@@ -28,4 +28,8 @@ class Visitor
   def excited_enough?(excitement)
     @preferences.include?(excitement)
   end
+
+  def rich_enough?(admission_fee)
+    spending_money - admission_fee >= 0
+  end
 end
