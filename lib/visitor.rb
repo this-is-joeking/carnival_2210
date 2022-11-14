@@ -24,4 +24,12 @@ class Visitor
   def tall_enough?(ht_req)
     @height >= ht_req
   end
+
+  def excited_enough?(excitement)
+    @preferences.include?(excitement)
+  end
+
+  def rich_enough?(admission_fee)
+    spending_money - admission_fee >= 0
+  end
 end

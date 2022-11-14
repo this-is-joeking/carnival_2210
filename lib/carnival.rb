@@ -14,9 +14,7 @@ class Carnival
   end
 
   def total_revenue
-    @rides.sum do |ride|
-      ride.total_revenue
-    end
+    @rides.sum { |ride| ride.total_revenue }
   end
 
   def most_popular_ride

@@ -51,4 +51,30 @@ RSpec.describe Visitor do
       expect(visitor1.tall_enough?(64)).to be false
     end
   end
+
+  describe '#excited_enough?()' do
+    it 'return boolean confirming if visitor has preference for given excitement level' do
+      visitor1 = Visitor.new('Bruce', 54, '$10')
+      visitor2 = Visitor.new('Tucker', 36, '$5')
+      visitor1.add_preference(:thrilling)
+      visitor2.add_preference(:gentle)
+
+      expect(visitor1.excited_enough?(:thrilling)).to be true
+      expect(visitor2.excited_enough?(:thrilling)).to be false
+      expect(visitor1.excited_enough?(:gentle)).to be false
+      expect(visitor2.excited_enough?(:gentle)).to be true
+    end
+  end
+
+  describe '#rich_enough?()' do
+    it 'returns a boolean confirming if visitor has enough money for ride' do
+      visitor1 = Visitor.new('Bruce', 54, '$10')
+      visitor2 = Visitor.new('Clarke', 56, '$10')
+      visitor3 = Visitor.new('Tucker', 36, '$1')
+
+      expect(visitor1.rich_enough?(5)).to be true
+      expect(visitor2.rich_enough?(10)).to be true      
+      expect(visitor3.rich_enough?(5)).to be false
+    end
+  end
 end
